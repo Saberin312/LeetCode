@@ -20,6 +20,7 @@ public class AllSort {
      * @param right
      * @return
      */
+
     public static void quickSort(int[] a, int left, int right) {
         if (left >= right)
             return;
@@ -239,7 +240,7 @@ public class AllSort {
     private static void swap(int[] data, int i, int j) {
         int tmp = data[i];
         data[i] = data[j];
-        data[j] = tmp;
+            data[j] = tmp;
     }
 
     public static void main(String[] args) {
@@ -249,12 +250,15 @@ public class AllSort {
             a[i] = random.nextInt(20);
         }
 
-        //quickSort(a, 0, a.length - 1);
+        System.out.println("原数组如下");
+        System.out.println(Arrays.toString(a));
+
+        quickSort(a, 0, a.length - 1);
         //mergeSort(a, 0, a.length - 1);
         //shellSort(a);
         //heapSort(a);
         //choseSort(a);
-        //bubbleSort(a);
+//        bubbleSort(a);
         //insertSort(a);
         System.out.println(Arrays.toString(a));
 

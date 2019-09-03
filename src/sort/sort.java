@@ -53,45 +53,47 @@ public class sort {
             return a;
         }
 
-        int[] b = new int[a.length];
-        for (int i = 0; i < a.length; i++) {
-            b[i] = a[i];
-        }
-
-
+//        int[] b = new int[a.length];
+//        for (int i = 0; i < a.length; i++) {
+//            b[i] = a[i];
+//        }
+//        System.out.println("复制数组如下：");
+//        System.out.println(Arrays.toString(b));
+//        System.out.println("原数组如下：");
+//        System.out.println(Arrays.toString(a));
         int i, j, base;
         i = left;
         j = right;
-        base = b[left];
+        base = a[left];
         System.out.println("a地址" + a);
-        System.out.println("b地址" + b);
+//        System.out.println("b地址" + b);
 
         while (i != j) {
-            while (b[j] < base && i < j) {
+            while (a[j] >= base && i < j) {
                 j--;
             }
-            while (b[i] > base && i < j) {
+            while (a[i] <= base && i < j) {
                 i++;
             }
 
             if (i < j) {
                 int tmp = a[i];
-                b[i]=b[j];
-                b[j] = tmp;
+                a[i]=a[j];
+                a[j] = tmp;
                 j--;
 
             }
         }
 
-        b[left] = b[i];
-        b[i] = base;
+        a[left] = a[i];
+        a[i] = base;
         if (left < i - 1) {
-            quickSortTest(b, left, i - 1);
+            quickSortTest(a, left, i - 1);
 
         }
 
         if (i + 1 < right) {
-            quickSortTest(b, i + 1, right);
+            quickSortTest(a, i + 1, right);
         }
 //        int left, right, base;
 
@@ -114,9 +116,9 @@ public class sort {
 
         System.out.println("原先数据如下所示：");
         System.out.println(Arrays.toString(a));
-        System.out.println("QuickSort 排序的方法如下所示：");
-        System.out.println(Arrays.toString(b));
-        return b;
+//        System.out.println("QuickSort 排序的方法如下所示：");
+//        System.out.println(Arrays.toString(b));
+        return a;
     }
 
     public static void main(String[] args) {
