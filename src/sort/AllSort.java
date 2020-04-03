@@ -253,6 +253,8 @@ public class AllSort {
         System.out.println("原数组如下");
         System.out.println(Arrays.toString(a));
 
+
+        System.out.println("快排结果如下：");
         quickSort(a, 0, a.length - 1);
         //mergeSort(a, 0, a.length - 1);
         //shellSort(a);
