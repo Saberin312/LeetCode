@@ -872,51 +872,55 @@ public class Solution {
 //        System.out.println(result);
 
 //        System.out.println(solution.uniquePaths(3,2));
-        int n = 34;
-        int ans = 0;
-//        return ans=n*(2**(n-1))%(10**9+7);
-        ans = (int) Math.pow(2, n - 1);
-        int tmp = (int) Math.pow(10, 9) + 7;
-        ans = ans % tmp;
-//        ans=(int)Math.pow(2,n-1)%(Math.pow(10,9)+7);
-        System.out.println(ans);
-        int[][] mat = {{1, 2, 3}, {4, 5, 0}};
-        for (int i = 0; i < 2; i++) {
-
-
-            System.out.println(Arrays.toString(mat[i]));
-            System.out.println(mat.length);
-        }
-        Scanner sc = new Scanner(System.in);
-        int N = 0;
-        int K = 0;
-//        while (sc.hasNext()) {
-        N = sc.nextInt();
-        K = sc.nextInt();
-        System.out.println(N);
-        System.out.println(K);
+//        int n = 34;
+//        int ans = 0;
+////        return ans=n*(2**(n-1))%(10**9+7);
+//        ans = (int) Math.pow(2, n - 1);
+//        int tmp = (int) Math.pow(10, 9) + 7;
+//        ans = ans % tmp;
+////        ans=(int)Math.pow(2,n-1)%(Math.pow(10,9)+7);
+//        System.out.println(ans);
+//        int[][] mat = {{1, 2, 3}, {4, 5, 0}};
+//        for (int i = 0; i < 2; i++) {
+//
+//
+//            System.out.println(Arrays.toString(mat[i]));
+//            System.out.println(mat.length);
 //        }
-        int[][] sum = new int[K + 1][N];
-//        while (sc.hasNext()){
-        for (int i = 0; i < N; i++) {
-            sum[0][i] = sc.nextInt();
-            System.out.println(sum[0][i]);
-//            for (int j   = 0; j < 2; j++) {
-//                sum[i][j] = sc.nextInt();
+//        Scanner sc = new Scanner(System.in);
+//        int N = 0;
+//        int K = 0;
+////        while (sc.hasNext()) {
+//        N = sc.nextInt();
+//        K = sc.nextInt();
+//        System.out.println(N);
+//        System.out.println(K);
+////        }
+//        int[][] sum = new int[K + 1][N];
+////        while (sc.hasNext()){
+//        for (int i = 0; i < N; i++) {
+//            sum[0][i] = sc.nextInt();
+//            System.out.println(sum[0][i]);
+////            for (int j   = 0; j < 2; j++) {
+////                sum[i][j] = sc.nextInt();
+////            }
+//        }
+////        }}
+//        for (int i = 0; i < K + 1; i++) {
+//            sum[i][0] = sum[0][0];
+//        }
+//
+//        for (int i = 1; i < K + 1; i++) {
+//
+//            for (int j = 1; j < N; j++) {
+//                sum[i][j] = sum[i][j - 1] + sum[i - 1][j];
 //            }
-        }
-//        }}
-        for (int i = 0; i < K + 1; i++) {
-            sum[i][0] = sum[0][0];
-        }
-
-        for (int i = 1; i < K + 1; i++) {
-
-            for (int j = 1; j < N; j++) {
-                sum[i][j] = sum[i][j - 1] + sum[i - 1][j];
-            }
-        }
-        System.out.println(sum[K][N - 1]);
+//        }
+//        System.out.println(sum[K][N - 1]);
+        StringBuffer stringBuffer = new StringBuffer("StringBuffer test:");
+        System.out.println(stringBuffer);
+        stringBuffer.replace(1, 2, "replace");
+        System.out.println(stringBuffer);
     }
 
     final static int M=1000000007;
