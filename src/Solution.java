@@ -842,6 +842,28 @@ public class Solution {
         return res;
     }
 
+    ArrayList<ArrayList<Integer>> lists2 = new ArrayList<>();
+    private  void backtrack(int num,HashSet<Integer> nums,ArrayList<Integer> list,HashSet<Integer[]> set) {
+        /*
+        * @Author:BHR
+        * @Description: 尝试采用回溯法解决网易4.7笔试第二题
+        * @Date:2020/4/8 13:01
+        */
+        if (list.size() == num) {
+            lists2.add(new ArrayList<>(list));
+            return;
+        }
+        for (Integer i:nums) {
+            int[] tmp={list.get(list.size()-1),i};
+            if(!set.contains(tmp)){
+                list.add(i);
+                HashSet newNums = new HashSet(nums);
+                newNums.remove(i);
+                backtrack(num,newNums, list, set);
+                list.remove(list.size()-1);
+            }
+        }
+    }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
